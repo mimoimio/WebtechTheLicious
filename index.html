@@ -3,166 +3,303 @@
 <head>
     <meta charset="UTF-8">
     <meta lang="en">
+
     <title>TheLicious Foods & Desserts</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"> -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-        :root{
-            --red: #E35656
-        }
-        * {
-            padding: 0;
-            margin: 0;
-            font-family: "Koulen", sans-serif;
+
+        /* :root {
+                --red: #E35656
+            }
+
+            * {
+                padding: 0;
+                margin: 0;
+                font-family: "Koulen", sans-serif;
+                box-sizing: border-box;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: 100dvh;
+                background: #edd;
+            }
+
+            header {
+                background: #fff;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding: .5rem;
+                align-items: center;
+            }
+
+            header ul {
+                display: flex;
+                gap: 1rem;
+
+            }
+
+            header ul li {
+                list-style-type: none;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                border-radius: 900px;
+                box-shadow: solid 3px;
+            }
+
+            .section {
+                background: #fab;
+                width: 1200px;
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: fit-content;
+            }
+
+
+            .banner {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .quote {
+                background: linear-gradient(90deg, #edd, #edd8), url(images/FoodsAtVendor.png);
+                height: fit-content;
+                background-size: cover;
+                align-items: center;
+
+            }
+
+            .quote div {
+                background: #0000;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+            }
+
+            .quote div * {
+                width: 100%;
+            }
+
+            .quote div h1 {
+                font-size: xx-large;
+
+            }
+
+            .quote div p {
+                padding: 1rem;
+                color: var(--red);
+                text-shadow: 2px 2px 2px #fff6;
+                font-size: x-large;
+                width: 300px;
+                text-align: justify;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(3, 100px);
+                gap: 2px;
+            } */
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
             box-sizing: border-box;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100dvh;
-            background: #edd;
-        }
-
-        header {
+            padding: 1rem;
             background: #fff;
+        }
+
+        footer .container {
             display: flex;
-            justify-content: space-between;
+            max-width: 1200px;
+            box-sizing: border-box;
             width: 100%;
-            padding: .5rem;
-            align-items: center;
+            justify-content: space-around;
+            margin: auto;
         }
 
-        header ul {
-            display: flex;
-            gap: 1rem;
-
-        }
-
-        header ul li {
-            list-style-type: none;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            border-radius: 900px;
-            box-shadow: solid 3px;
-        }
-
-        .section {
-            background: #fab;
-            width: 1200px;
-            padding: 1rem;
+        footer .container * {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            height: fit-content;
-        }
-
-
-        .banner {
             width: 100%;
-            display: flex;
-            flex-direction: column;
+            flex: 1;
         }
 
-        .quote {
-            background: linear-gradient(90deg, #edd, #edd8), url(images/FoodsAtVendor.png) ;
-            height: fit-content;
-            background-size: cover;
-            align-items: center;
-            
+        a {
+            color: black;
+            text-decoration: none;
+            padding: .2rem;
+            border-radius: .5rem;
         }
 
-        .quote div{
-            background: #0000;
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-        }
-        
-        .quote div *{
-            width: 100%;
-        }
-        .quote div h1{
-            font-size: xx-large;
-
-        }
-        .quote div p{
-            padding: 1rem;
-            color: var(--red);
-            text-shadow: 2px 2px 2px #fff6 ;
-            font-size: x-large;
-            width: 300px;
-            text-align: justify;
+        a:hover {
+            background: #0002;
         }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 100px);
-            gap: 2px;
+        * {
+            font-family: Koulen;
         }
     </style>
 </head>
 
-<body>
+<body style="background: #edd; ">
     <header>
-        <h1>TheLicious</h1>
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Menu</li>
-            <li>Contact Us</li>
-        </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="justify-content: space-between;">
+            <a class="navbar-brand" href="#">TheLicious</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="flex-grow: 0;">
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/about.html">About</a>
+                    <a class="nav-link" href="/menu.html">Menu</a>
+                    <a class="nav-link" href="/contactus.html">Contact Us</a>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <img src="images/Banner.png" alt="" class="banner">
+    <img src="/images/Banner.png" alt="" class="img-fluid">
 
-    <div src="images/FoodsAtVendor.png" alt="Foods" class="banner quote">
-        <div class="section">
-            <h1>HOMEMADE FOODS & DESSERTS</h1>
+    <div src="" alt="Foods" class="banner quote"
+        style="background: linear-gradient(90deg, #edd, #edd8), url(images/FoodsAtVendor.png); padding: 2rem;">
+        <div class="container justify-content-center">
+            <h1 class="">HOMEMADE FOODS & DESSERTS</h1>
             <p>Only the most 'Licious choices of homemade foods and desserts from us</p>
         </div>
     </div>
 
-    <div class="section">
-        <h1>Bruh</h1>
-        <p>Hello</p>
-        <div class="grid">
-            <div>bruh</div>
+    <div class=" p-4 container text-white text-center " style="background: url('/images/BG.png');">
+        <h1 class="">Treat Yourself Today</h1>
+        <p class="">Explore our selections of dishes and desserts</p>
+        <div class="d-flex my-4 justify-content-center">
+            <div class="mx-2"
+                style="width: 300px; height: 300px; border-radius: 1rem; background: #fff; box-shadow: #0002 2px 2px;">
+            </div>
+            <div class="mx-2"
+                style="width: 300px; height: 300px; border-radius: 1rem; background: #fff; box-shadow: #0002 2px 2px;">
+            </div>
+            <div class="mx-2"
+                style="width: 300px; height: 300px; border-radius: 1rem; background: #fff; box-shadow: #0002 2px 2px;">
+            </div>
+        </div>
+        <div class="d-flex">
+            <a class="border-white border m-1 rounded-lg p-1 d-flex w-50">
+                <div class=" text-white flex-fill">View Full Menu</div>
+            </a>
+            <a class="border-white border m-1 rounded-lg p-1 d-flex w-50">
+                <div class=" text-white flex-fill">Order Now</div>
+            </a>
         </div>
     </div>
-    <div class="section">
-        <h1>Bruh</h1>
-        <p>Hello</p>
-        <div class="grid">
-            <div>bruh</div>
+
+    <div class="p-4 container text-center">
+        <div class="d-flex flex-column">
+            <div class="d-flex flex-column">
+                <h1>Visit Our Booths!</h1>
+                <p>You can meet us at:</p>
+            </div>
+            <div class="d-flex">
+                <div class="d-flex flex-column w-50 align-items-center gap-8">
+                    <h2>TheLicious Food & Dessert Shop (KENMS)</h2>
+                    <p>9am-10pm ( Monday - Friday )</p>
+                    <p>10am-5pm ( Saturday )</p>
+                    <p>CLOSED ( Sunday )</p>
+                </div>
+                <div class="d-flex flex-column w-50 align-items-center gap-8">
+                    <h2>TheLicious Food & Dessert Booth (HS Cafe Dry Area)</h2>
+                    <p>10am-6pm ( Monday - Friday )</p>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="section">
-        <h1>Bruh</h1>
-        <p>Hello</p>
-        <div class="grid">
-            <div>bruh</div>
-        </div>
-    </div>
-    <div class="section">
-        <h1>Bruh</h1>
-        <p>Hello</p>
-        <div class="grid">
-            <div>bruh</div>
-        </div>
-    </div>
-    <div class="section">
-        <h1>Bruh</h1>
-        <p>Hello</p>
-        <div class="grid">
-            <div>bruh</div>
+
+    <div class=" p-4 container text-white text-center " style="background: url('/images/BG.png');">
+        <h1 class="">Join Our Groups</h1>
+        <p class="">And get started on ordering!</p>
+        <div class="d-flex justify-content-center">
+            <a class="border-white border m-1 rounded-lg p-1 d-flex w-25 flex-column">
+                <h2 class=" text-white flex-fill">THELICIOUS FOOD&DESSERT UIA</h2>
+                <div class=" text-white flex-fill">WhatsApp Group</div>
+            </a>
+            <a class="border-white border m-1 rounded-lg p-1 d-flex w-25 flex-column">
+                <h2 class=" text-white flex-fill">The Licious IIUM , Food & Dessert</h2>
+                <div class=" text-white flex-fill">Telegram Group</div>
+            </a>
         </div>
     </div>
 
     <footer>
+        <div class="container">
+            <h1>TheLicious</h1>
+            <div class="item">
+                <a href="/">Home</a>
+                <ul>
+                    <li>Thing</li>
+                    <li>Thing</li>
+                    <li>Thing</li>
+                    <li>Thing</li>
+                </ul>
+            </div>
+            <div class="item">
+                <a href="about.html">About Us</a>
+                <ul>
+                    <li>Thing</li>
+                    <li>Thing</li>
+                    <li>Thing</li>
+                    <li>Thing</li>
+                </ul>
+            </div>
+            <div class="item">
+                <a href="menu.html">Menu</a>
+                <ul>
+                    <li>Thing</li>
+                    <li>Thing</li>
+                    <li>Thing</li>
+                    <li>Thing</li>
+                </ul>
+            </div>
+            <div class="item">
+                <a href="menu.html">Contact Us</a>
+                <ul>
+                    <li>Thing</li>
+                    <li>Thing</li>
+                    <li>Thing</li>
+                    <li>Thing</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            SUKA BISNES TRADING
+        </div>
 
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
 </body>
+
 
 </html>
