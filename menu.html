@@ -5,7 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Menu</title>
-  <link rel="stylesheet" href="styles.css">
   <style>
     .menu {
       display: grid;
@@ -48,13 +47,16 @@
 </head>
 
 <body>
-  
   <h1 class="text-center font-weight-bold">Menu</h1>
   <div class="menu container" id="menu"></div>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
   <script type="module">
-    import menuItems from './menuItems.js'
+    import { menuItems, menuItemTemplate } from './menuItems.js'
     // Array of menu items
 
 
@@ -78,55 +80,6 @@
       menuContainer.appendChild(menuItem);
     });
   </script>
-
-  
-<footer >
-  <div class="container">
-      <h1>TheLicious</h1>
-      <div class="item">
-          <a href="/">Home</a>
-          <ul>
-              <li>Thing</li>
-              <li>Thing</li>
-              <li>Thing</li>
-              <li>Thing</li>
-          </ul>
-      </div>
-      <div class="item">
-          <a href="about.html">About Us</a>
-          <ul>
-              <li>Thing</li>
-              <li>Thing</li>
-              <li>Thing</li>
-              <li>Thing</li>
-          </ul>
-      </div>
-      <div class="item">
-          <a href="menu.html">Menu</a>
-          <ul>
-              <li>Thing</li>
-              <li>Thing</li>
-              <li>Thing</li>
-              <li>Thing</li>
-          </ul>
-      </div>
-      <div class="item">
-          <a href="menu.html">Contact Us</a>
-          <ul>
-              <li>Thing</li>
-              <li>Thing</li>
-              <li>Thing</li>
-              <li>Thing</li>
-          </ul>
-      </div>
-  </div>
-
-  <div class="container">
-      SUKA BISNES TRADING
-  </div>
-
-</footer>
-
 </body>
 
 </html>
