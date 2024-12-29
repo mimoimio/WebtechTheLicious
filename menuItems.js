@@ -1,6 +1,6 @@
 
 
-const menuItems = [
+export const menuItems = [
     { image: "images/foods/kektornado.png", name: "Kek Tornado ", price: "RM18.00" },
     { image: "images/foods/creampuff.png", name: "Cream Puff", price: "RM8.00" },
     { image: "images/foods/burntcheesecake.jpg", name: "Burnt Cheesecake", price: "RM8.00" },
@@ -35,4 +35,13 @@ const menuItems = [
     
   ];
 
-export default menuItems;
+export function menuItemTemplate(item) {
+   return `
+            <img src="${item.image}" alt="${item.name}">
+
+            <h3>${item.name}</h3>
+                <p>_____________</P>
+            <p>${item.price}</p>
+                `
+}
+
