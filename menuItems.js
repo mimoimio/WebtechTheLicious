@@ -40,7 +40,7 @@ export function menuItemTemplate(item) {
             <img src="${item.image}" alt="${item.name}">
 
             <h3>${item.name}</h3>
-                <p>_____________</P>
+                <p>_____________ </P>
             <p>${item.price}</p>
                 `
 }

@@ -13,17 +13,16 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 16px;
+      
       }
       .menu-item {
         border: 1px solid #ccc;
         padding: 10px;
         text-align: center;
         border-radius: 8px;
+       
       }
-      .menu .menu-item:nth-last-child(1) {
-        background-color: #555;
-        transform: translateX(100%);
-      }
+     
       .menu-item img {
         max-width: 100%;
         /* height: auto; */
@@ -42,6 +41,8 @@
         height: 200px;
         object-fit: cover;
       }
+
+ 
     </style>
     <link
       rel="stylesheet"
@@ -51,8 +52,12 @@
     />
   </head>
   <body>
-    <h1 class="text-xl-center font-weight-bold">Menu</h1>
+    <div class="title-container">
+      <h1 class="text-center font-weight-bold" style="background: url(images/BG.png); padding: 20px; margin: 0;">Menu</h1>
+    </div>
+   
     <div class="menu container" id="menu"></div>
+    
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -70,6 +75,8 @@
         const menuContainer = $("#menu");
         menuContainer.hide();
         menuContainer.fadeIn(2000);
+      
+
 
         menuItems.forEach((item) => {
           const menuItem = document.createElement("div");
