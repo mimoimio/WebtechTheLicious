@@ -1,105 +1,197 @@
 @import url("https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
-      :root {
-        --red: #e35656;
-      }
-      * {
-        padding: 0;
-        margin: 0;
-        font-family: "Koulen", sans-serif;
-        box-sizing: border-box;
-      }
+:root {
+  --red: #e35656;
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Koulen", sans-serif;
+  box-sizing: border-box;
+}
 
-      body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 100dvh;
-        background: #edd;
-      }
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100dvh;
+  background: #edd;
+}
 
-      header {
-        background: #fff;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 0.5rem;
-        align-items: center;
-      }
+/* Basic header and nav styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
+}
 
-      header ul {
-        display: flex;
-        gap: 1rem;
-      }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding-top: 10px;
+}
 
-      header ul li {
-        list-style-type: none;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        border-radius: 900px;
-        box-shadow: solid 3px;
-      }
+nav ul li {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 900px;
+  box-shadow: solid 3px;
+  text-decoration: none;
+  align-items: center;
+  color: black;
+}
 
-      a {
-        text-decoration: none;
-        color: black;
-      }
+a {
+  text-decoration: none;
+  color: black;
+}
 
-      a:hover {
-        color:red;
-      }
-      .section {
-        background: #fab;
-        width: 1200px;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: fit-content;
-      }
+a:hover {
+  color: red;
+}
 
-      .banner {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-      }
+/* Hamburger menu styling */
+.hamburger-menu {
+  padding-top: 15px;
+  display: none; /* Hidden on larger screens */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
 
-      .quote {
-        background: linear-gradient(90deg, #edd, #edd8),
-          url(images/FoodsAtVendor.png);
-        height: fit-content;
-        background-size: cover;
-        align-items: center;
-      }
+.hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: black;
+}
 
-      .quote div {
-        background: #0000;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-      }
+.section {
+  background: #fab;
+  width: 1200px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+}
 
-      .quote div * {
-        width: 100%;
-      }
-      .quote div h1 {
-        font-size: xx-large;
-      }
-      .quote div p {
-        padding: 1rem;
-        color: var(--red);
-        text-shadow: 2px 2px 2px #fff6;
-        font-size: x-large;
-        width: 300px;
-        text-align: justify;
-      }
+.banner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 100px);
-        gap: 2px;
-      }
-      
-      footer {
-        background: white;
-      }
+.quote {
+  background: linear-gradient(90deg, #edd, #edd8), url(images/FoodsAtVendor.png);
+  height: fit-content;
+  background-size: cover;
+  align-items: center;
+}
+
+.quote div {
+  background: #0000;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.quote div * {
+  width: 100%;
+}
+.quote div h1 {
+  font-size: xx-large;
+}
+.quote div p {
+  padding: 1rem;
+  color: var(--red);
+  text-shadow: 2px 2px 2px #fff6;
+  font-size: x-large;
+  width: 300px;
+  text-align: justify;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 2px;
+}
+
+footer {
+  background: white;
+}
+
+@media (max-width: 768px) {
+  header ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hamburger-menu {
+    display: flex; /* Show hamburger menu */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+  }
+
+  nav {
+    display: none; /* Hide nav by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    right: 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  nav.active {
+    display: flex; /* Show nav when active */
+  }
+
+  .section {
+    padding: 1.5rem;
+  }
+
+  .card-right,
+  .card-left {
+    max-width: 100%; /* Allow cards to take full width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header ul {
+    align-items: center;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  nav ul {
+    gap: 0.5rem;
+  }
+
+  .section {
+    padding: 1rem;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+}

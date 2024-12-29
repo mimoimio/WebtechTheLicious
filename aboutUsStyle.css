@@ -24,29 +24,33 @@ body {
   background: var(--gray);
 }
 
+/* Basic header and nav styles */
 header {
-  background: #fff;
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 0.5rem;
-  align-items: center;
+  padding: 10px 20px;
   position: sticky;
-  top:0;
-  z-index: 1000; /* Higher z-index to ensure it appears above content */
+  top: 0;
+  background: white;
+  z-index: 1000;
 }
 
 nav ul {
+  list-style: none;
   display: flex;
   gap: 1rem;
+  padding-top: 10px;
 }
 
 nav ul li {
-  list-style-type: none;
   padding-left: 1rem;
   padding-right: 1rem;
   border-radius: 900px;
   box-shadow: solid 3px;
+  text-decoration: none;
+  align-items: center;
+  color: black;
 }
 
 a {
@@ -56,6 +60,22 @@ a {
 
 a:hover {
   color: red;
+}
+
+/* Hamburger menu styling */
+.hamburger-menu {
+  padding-top: 15px;
+  display: none; /* Hidden on larger screens */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: black;
 }
 
 .section {
@@ -125,6 +145,27 @@ a:hover {
     align-items: flex-start;
   }
 
+  .hamburger-menu {
+    display: flex; /* Show hamburger menu */
+    padding-bottom: 20px;
+    align-items: center;
+  }
+
+  nav {
+    display: none; /* Hide nav by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    right: 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  nav.active {
+    display: flex; /* Show nav when active */
+  }
+
   .section {
     padding: 1.5rem;
   }
@@ -143,6 +184,14 @@ a:hover {
 
   header ul {
     align-items: center;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  nav ul {
+    gap: 0.5rem;
   }
 
   .section {
