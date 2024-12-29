@@ -8,6 +8,10 @@
         min-height: 100dvh;
         background: #edd;
     }
+
+    .bg-desserts{
+        background: url('/images/BG.png');
+    }
 /* 
 
     * {
@@ -140,5 +144,5 @@ a:hover {
 
 * {
     font-family: Koulen;
-    
+
 }
