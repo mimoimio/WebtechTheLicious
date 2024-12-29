@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+      :root {
+        --red: #e35656;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Koulen", sans-serif;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100dvh;
+        background: #edd;
+      }
+
+      header {
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0.5rem;
+        align-items: center;
+      }
+
+      header ul {
+        display: flex;
+        gap: 1rem;
+      }
+
+      header ul li {
+        list-style-type: none;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 900px;
+        box-shadow: solid 3px;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      a:hover {
+        color:red;
+      }
+      .section {
+        background: #fab;
+        width: 1200px;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+      }
+
+      .banner {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .quote {
+        background: linear-gradient(90deg, #edd, #edd8),
+          url(images/FoodsAtVendor.png);
+        height: fit-content;
+        background-size: cover;
+        align-items: center;
+      }
+
+      .quote div {
+        background: #0000;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+      }
+
+      .quote div * {
+        width: 100%;
+      }
+      .quote div h1 {
+        font-size: xx-large;
+      }
+      .quote div p {
+        padding: 1rem;
+        color: var(--red);
+        text-shadow: 2px 2px 2px #fff6;
+        font-size: x-large;
+        width: 300px;
+        text-align: justify;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        gap: 2px;
+      }
+      
+      footer {
+        background: white;
+      }
