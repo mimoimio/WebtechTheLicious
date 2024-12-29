@@ -1,105 +1,23 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 100dvh;
-        background: #edd;
-    }
-
-    .bg-desserts{
-        background: url(images/BG.png);
-    }
 /* 
 
-    * {
-        padding: 0;
-        margin: 0;
-        font-family: "Koulen", sans-serif;
-        box-sizing: border-box;
-    }
+general
 
-    header {
-        background: #fff;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: .5rem;
-        align-items: center;
-    }
+*/
 
-    header ul {
-        display: flex;
-        gap: 1rem;
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100dvh;
+    background: #edd;
+}
 
-    }
-
-    header ul li {
-        list-style-type: none;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        border-radius: 900px;
-        box-shadow: solid 3px;
-    }
-
-    .section {
-        background: #fab;
-        width: 1200px;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: fit-content;
-    }
-
-
-    .banner {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .quote {
-        background: linear-gradient(90deg, #edd, #edd8), url(images/FoodsAtVendor.png);
-        height: fit-content;
-        background-size: cover;
-        align-items: center;
-
-    }
-
-    .quote div {
-        background: #0000;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-
-    .quote div * {
-        width: 100%;
-    }
-
-    .quote div h1 {
-        font-size: xx-large;
-
-    }
-
-    .quote div p {
-        padding: 1rem;
-        color: var(--red);
-        text-shadow: 2px 2px 2px #fff6;
-        font-size: x-large;
-        width: 300px;
-        text-align: justify;
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 100px);
-        gap: 2px;
-    } */
+.bg-desserts {
+    background: url(images/BG.png);
+}
 
 footer {
     display: flex;
@@ -133,7 +51,7 @@ a {
     border-radius: .5rem;
 }
 
-a.border-white{
+a.border-white {
     color: white;
 }
 
@@ -146,3 +64,49 @@ a:hover {
     font-family: Koulen;
 
 }
+
+
+/* 
+
+menu.html
+
+*/
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+  }
+
+  .menu-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  .menu-item img {
+    max-width: 100%;
+    /* height: auto; */
+    border-radius: 4px;
+  }
+
+  .menu-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  .menu-item p {
+    font-size: 16px;
+    color: #555;
+  }
+
+  img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  img.w-100{
+    height: fit-content;
+  }
