@@ -40,7 +40,7 @@ export default function navbar() {
                         ${navItems}
                         <li class="nav-item">
                             <a class="nav-link"
-                                href="https://docs.google.com/forms/d/1V2YshOzGgkbvLRPLolTkf00uwJNjKykhdljCakH7j5g/"
+                                href="https://forms.gle/ynDqoRMfrEJYvx4RA"
                                 target="_blank">Order Now</a>
                         </li>
                     </ul>
