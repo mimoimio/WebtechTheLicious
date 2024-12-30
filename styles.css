@@ -7,6 +7,13 @@ general
 
 */
 
+html{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-shadow: 4px 4px 4px #0002;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -201,6 +208,14 @@ menu.html
   gap: 16px;
 }
 
+@media (max-width:767px) {
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+}
+}
+
 .menu-item {
   border: 1px solid #ccc;
   padding: 10px;
@@ -233,6 +248,8 @@ img {
 img.w-100 {
   height: fit-content;
 }
+
+
 
 /* 
   
