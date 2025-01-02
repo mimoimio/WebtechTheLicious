@@ -13,6 +13,58 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css ">
+
+    <script>
+        function initMap(lat, lng) {
+            // Dynamically construct the URL with user's latitude and longitude
+            const zoomLevel = 0.0015; // Smaller value = more zoomed in
+            const link = `https://www.openstreetmap.org/export/embed.html?bbox=${lng - zoomLevel},${lat - zoomLevel},${lng + zoomLevel},${lat + zoomLevel}&layer=mapnik&marker=${lat},${lng}`;
+
+
+            // Create and configure the iframe element
+            const iframe = document.createElement('iframe');
+            iframe.src = link;
+            iframe.width = 450;
+            iframe.height = 450;
+            iframe.style.borderRadius = '1rem'
+            iframe.style.border = '.1rem black solid'
+            iframe.style.margin = '1rem'
+
+            // Append the iframe to the display container
+            const display = document.getElementById('displayMap');
+            display.innerHTML = ''; // Clear previous iframe if any
+            display.append(iframe);
+        }
+
+        function getLocation() {
+            // initMap(lat, lng);
+            initMap(3.2467048, 101.7344507);
+            // if (navigator.geolocation) {
+            //     navigator.geolocation.getCurrentPosition(
+            //         function (position) {
+            //             const lat = position.coords.latitude;
+            //             const lng = position.coords.longitude;
+
+            //             // Show the user's location in text
+            //             document.getElementById("location").innerHTML = `Latitude: ${lat}, Longitude: ${lng}`;
+
+            //             // Initialize the map with user's location
+            //             initMap(lat, lng);
+            //         },
+            //         function (error) {
+            //             document.getElementById("location").textContent =
+            //                 "Unable to retrieve your location.";
+            //         }
+            //     );
+            // } else {
+            //     document.getElementById("location").textContent =
+            //         "Geolocation is not supported by this browser.";
+            // }
+        }
+
+        // Trigger the getLocation function when the page loads
+        window.onload = getLocation;
+    </script>
 </head>
 
 <body class="d-flex flex-column align-items-center">
@@ -89,6 +141,7 @@
                     <p>10am-6pm ( Monday - Friday )</p>
                 </div>
             </div>
+            <div id="displayMap"></div>
         </div>
     </div>
 
