@@ -7,7 +7,7 @@ general
 
 */
 
-html{
+html {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -70,6 +70,29 @@ a:hover {
 * {
   font-family: Koulen;
 
+}
+
+#places {
+  display: flex;
+}
+
+#places div {
+  border-radius: 2rem;
+}
+
+#places div iframe{
+  box-shadow: #0004 2px 2px 8px;
+}
+
+#booths div iframe{
+  width: 100%;
+}
+
+@media (max-width:767px) {
+  #places {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* 
@@ -214,7 +237,7 @@ menu.html
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 16px;
-}
+  }
 }
 
 .menu-item {

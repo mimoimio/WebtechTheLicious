@@ -42,7 +42,7 @@
       <div class="input-group mb-3 d-flex">
         <button class="btn btn-outline-secondary  bg-white" type="button" id="button-addon1"><i
             class="bi bi-search"></i></button>
-        <input id="search" type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+        <input id="search" type="text" class="form-control" placeholder="Search foods or desserts" aria-label="Example text with button addon"
           aria-describedby="button-addon1">
       </div>
 
@@ -92,7 +92,7 @@
         return searchResults.includes(item.name)
       }
 
-      search.keypress(function () {
+      $("#search").on("change",function () {
         console.log("Key pressed")
         displayItems(menuItems.filter(checkName))
       })

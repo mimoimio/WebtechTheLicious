@@ -15,55 +15,55 @@
     <link rel="stylesheet" href="styles.css ">
 
     <script>
-        function initMap(lat, lng) {
-            // Dynamically construct the URL with user's latitude and longitude
-            const zoomLevel = 0.0015; // Smaller value = more zoomed in
-            const link = `https://www.openstreetmap.org/export/embed.html?bbox=${lng - zoomLevel},${lat - zoomLevel},${lng + zoomLevel},${lat + zoomLevel}&layer=mapnik&marker=${lat},${lng}`;
+        // function initMap(lat, lng) {
+        //     // Dynamically construct the URL with user's latitude and longitude
+        //     const zoomLevel = 0.0015; // Smaller value = more zoomed in
+        //     const link = `https://www.openstreetmap.org/export/embed.html?bbox=${lng - zoomLevel},${lat - zoomLevel},${lng + zoomLevel},${lat + zoomLevel}&layer=mapnik&marker=${lat},${lng}`;
 
 
-            // Create and configure the iframe element
-            const iframe = document.createElement('iframe');
-            iframe.src = link;
-            iframe.width = 450;
-            iframe.height = 450;
-            iframe.style.borderRadius = '1rem'
-            iframe.style.border = '.1rem black solid'
-            iframe.style.margin = '1rem'
+        //     // Create and configure the iframe element
+        //     const iframe = document.createElement('iframe');
+        //     iframe.src = link;
+        //     iframe.width = 450;
+        //     iframe.height = 450;
+        //     iframe.style.borderRadius = '1rem'
+        //     iframe.style.border = '.1rem black solid'
+        //     iframe.style.margin = '1rem'
 
-            // Append the iframe to the display container
-            const display = document.getElementById('displayMap');
-            display.innerHTML = ''; // Clear previous iframe if any
-            display.append(iframe);
-        }
+        //     // Append the iframe to the display container
+        //     const display = document.getElementById('displayMap');
+        //     display.innerHTML = ''; // Clear previous iframe if any
+        //     display.append(iframe);
+        // }
+        // let lat = 3.2507048;
+        // let long = 101.7344507;
+        // func
+        // function getLocation() {
+        //     // initMap(lat, lng);
+        //     initMap(lat, long);
+        //     // if (navigator.geolocation) {
+        //     //     navigator.geolocation.getCurrentPosition(
+        //     //         function (position) {
+        //     //             const lat = position.coords.latitude;
+        //     //             const lng = position.coords.longitude;
 
-        function getLocation() {
-            // initMap(lat, lng);
-            initMap(3.2467048, 101.7344507);
-            // if (navigator.geolocation) {
-            //     navigator.geolocation.getCurrentPosition(
-            //         function (position) {
-            //             const lat = position.coords.latitude;
-            //             const lng = position.coords.longitude;
+        //     //             // Show the user's location in text
+        //     //             document.getElementById("location").innerHTML = `Latitude: ${lat}, Longitude: ${lng}`;
 
-            //             // Show the user's location in text
-            //             document.getElementById("location").innerHTML = `Latitude: ${lat}, Longitude: ${lng}`;
-
-            //             // Initialize the map with user's location
-            //             initMap(lat, lng);
-            //         },
-            //         function (error) {
-            //             document.getElementById("location").textContent =
-            //                 "Unable to retrieve your location.";
-            //         }
-            //     );
-            // } else {
-            //     document.getElementById("location").textContent =
-            //         "Geolocation is not supported by this browser.";
-            // }
-        }
-
-        // Trigger the getLocation function when the page loads
-        window.onload = getLocation;
+        //     //             // Initialize the map with user's location
+        //     //             initMap(lat, lng);
+        //     //         },
+        //     //         function (error) {
+        //     //             document.getElementById("location").textContent =
+        //     //                 "Unable to retrieve your location.";
+        //     //         }
+        //     //     );
+        //     // } else {
+        //     //     document.getElementById("location").textContent =
+        //     //         "Geolocation is not supported by this browser.";
+        //     // }
+        // }
+        // window.onload = getLocation;
     </script>
 </head>
 
@@ -121,27 +121,32 @@
     </div>
 
     <!-- Booths -->
-    <div class="p-4 container text-center">
+    <div id='booths' class="p-4 container text-center d-flex flex-column">
         <div class="d-flex flex-column">
-            <div class="d-flex flex-column">
-                <h1>Visit Our Booths!</h1>
-                <p>You can meet us at:</p>
+            <h1>Visit Our Booths!</h1>
+            <p>You can meet us at:</p>
+        </div>
+        <div id="places" class="gap-2">
+            <div class="d-flex flex-column w-100 align-items-center gap-8 p-4"
+                style="background: url('images/KENMS.png'); background-size: cover;">
+                <h2>TheLicious Food & Dessert Shop (KENMS)</h2>
+                <p>9am-10pm ( Monday - Friday )</p>
+                <p>10am-5pm ( Saturday )</p>
+                <p>CLOSED ( Sunday )</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248.96209310136396!2d101.73414316156044!3d3.2519975600743414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc39ade99fdb99%3A0x2f5466b409105a78!2sKuliyyah%20Human%20Science%20Dry%20Area%20(HS%20Dry%20Area)!5e0!3m2!1sen!2smy!4v1735980091644!5m2!1sen!2smy&zoom=30"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div class="d-flex">
-                <div class="d-flex flex-column w-50 align-items-center gap-8 p-4"
-                    style="background: url('images/KENMS.png'); background-size: cover;">
-                    <h2>TheLicious Food & Dessert Shop (KENMS)</h2>
-                    <p>9am-10pm ( Monday - Friday )</p>
-                    <p>10am-5pm ( Saturday )</p>
-                    <p>CLOSED ( Sunday )</p>
-                </div>
-                <div class="d-flex flex-column w-50 align-items-center gap-8 p-4"
-                    style="background: url('images/HSDRY.png'); background-size: cover;">
-                    <h2>TheLicious Food & Dessert Booth (HS Cafe Dry Area)</h2>
-                    <p>10am-6pm ( Monday - Friday )</p>
-                </div>
+            <div class="d-flex flex-column w-100 align-items-center gap-8 p-4"
+                style="background: url('images/HSDRY.png'); background-size: cover;">
+                <h2>TheLicious Food & Dessert Booth (HS Cafe Dry Area)</h2>
+                <p>10am-6pm ( Monday - Friday )</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d395.2034357415536!2d101.73718944122663!3d3.2501042260119006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc397ad0aa3a85%3A0xdea33e03cc9ea336!2sTheLicious%2C%20Food%20%26%20Dessert%20(UIAM)!5e0!3m2!1sen!2smy!4v1735979977514!5m2!1sen!2smy"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div id="displayMap"></div>
         </div>
     </div>
 
