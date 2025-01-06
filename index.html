@@ -2,106 +2,68 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta lang="en">
     <title>TheLicious Foods & Desserts</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-        :root{
-            --red: #E35656
-        }
-        * {
-            padding: 0;
-            margin: 0;
-            font-family: "Koulen", sans-serif;
-            box-sizing: border-box;
-        }
 
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100dvh;
-            background: #edd;
-        }
-
-        header {
-            background: #fff;
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            padding: .5rem;
-            align-items: center;
-        }
-
-        header ul {
-            display: flex;
-            gap: 1rem;
-
-        }
-
-        header ul li {
-            list-style-type: none;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            border-radius: 900px;
-            box-shadow: solid 3px;
-        }
-
-        .section {
-            background: #fab;
-            width: 1200px;
-            padding: 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: fit-content;
-        }
+    <script src="jquery-3.7.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css ">
+    <script>
+        // function initMap(lat, lng) {
+        //     // Dynamically construct the URL with user's latitude and longitude
+        //     const zoomLevel = 0.0015; // Smaller value = more zoomed in
+        //     const link = `https://www.openstreetmap.org/export/embed.html?bbox=${lng - zoomLevel},${lat - zoomLevel},${lng + zoomLevel},${lat + zoomLevel}&layer=mapnik&marker=${lat},${lng}`;
 
 
-        .banner {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-        }
+        //     // Create and configure the iframe element
+        //     const iframe = document.createElement('iframe');
+        //     iframe.src = link;
+        //     iframe.width = 450;
+        //     iframe.height = 450;
+        //     iframe.style.borderRadius = '1rem'
+        //     iframe.style.border = '.1rem black solid'
+        //     iframe.style.margin = '1rem'
 
-        .quote {
-            background: linear-gradient(90deg, #edd, #edd8), url(images/FoodsAtVendor.png) ;
-            height: fit-content;
-            background-size: cover;
-            align-items: center;
-            
-        }
+        //     // Append the iframe to the display container
+        //     const display = document.getElementById('displayMap');
+        //     display.innerHTML = ''; // Clear previous iframe if any
+        //     display.append(iframe);
+        // }
+        // let lat = 3.2507048;
+        // let long = 101.7344507;
+        // func
+        // function getLocation() {
+        //     // initMap(lat, lng);
+        //     initMap(lat, long);
+        //     // if (navigator.geolocation) {
+        //     //     navigator.geolocation.getCurrentPosition(
+        //     //         function (position) {
+        //     //             const lat = position.coords.latitude;
+        //     //             const lng = position.coords.longitude;
 
-        .quote div{
-            background: #0000;
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-        }
-        
-        .quote div *{
-            width: 100%;
-        }
-        .quote div h1{
-            font-size: xx-large;
+        //     //             // Show the user's location in text
+        //     //             document.getElementById("location").innerHTML = `Latitude: ${lat}, Longitude: ${lng}`;
 
-        }
-        .quote div p{
-            padding: 1rem;
-            color: var(--red);
-            text-shadow: 2px 2px 2px #fff6 ;
-            font-size: x-large;
-            width: 300px;
-            text-align: justify;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 100px);
-            gap: 2px;
-        }
-    </style>
+        //     //             // Initialize the map with user's location
+        //     //             initMap(lat, lng);
+        //     //         },
+        //     //         function (error) {
+        //     //             document.getElementById("location").textContent =
+        //     //                 "Unable to retrieve your location.";
+        //     //         }
+        //     //     );
+        //     // } else {
+        //     //     document.getElementById("location").textContent =
+        //     //         "Geolocation is not supported by this browser.";
+        //     // }
+        // }
+        // window.onload = getLocation;
+    </script>
 </head>
 
 <body>
@@ -124,11 +86,25 @@
         </div>
     </div>
 
-    <div class="section">
-        <h1>Bruh</h1>
-        <p>Hello</p>
-        <div class="grid">
-            <div>bruh</div>
+    <!-- Menu Teaser -->
+    <div class=" p-4 container text-white text-center bg-desserts">
+        <h1 class="">Treat Yourself Today</h1>
+        <p class="">Explore our selections of dishes and desserts</p>
+        <div class="menu container teaser-menu" id="menu" ">
+            <script type="module">
+                import { menuItems, menuItemTemplate } from "./menuItems.js";
+
+                $(document).ready(() => {
+                    const menuContainer = $("#menu");
+                    let i;
+                    for (i = 0; i < 3; i++) {
+                        const menuitem = menuItemTemplate(menuItems[Math.floor(Math.random() * menuItems.length)])
+                        menuContainer.append(menuitem)
+                    }
+                })
+
+
+            </script>
         </div>
     </div>
     <div class="section">
@@ -138,25 +114,52 @@
             <div>bruh</div>
         </div>
     </div>
-    <div class="section">
-        <h1>Bruh</h1>
-        <p>Hello</p>
-        <div class="grid">
-            <div>bruh</div>
+
+    <!-- Booths -->
+    <div id='booths' class="p-4 container text-center d-flex flex-column">
+        <div class="d-flex flex-column">
+            <h1>Visit Our Booths!</h1>
+            <p>You can meet us at:</p>
+        </div>
+        <div id="places" class="gap-2">
+            <div class="d-flex flex-column w-100 align-items-center gap-8 p-4"
+                style="background: url('images/KENMS.png'); background-size: cover;">
+                <h2>TheLicious Food & Dessert Shop (KENMS)</h2>
+                <p>9am-10pm ( Monday - Friday )</p>
+                <p>10am-5pm ( Saturday )</p>
+                <p>CLOSED ( Sunday )</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d395.2034357415536!2d101.73718944122663!3d3.2501042260119006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc397ad0aa3a85%3A0xdea33e03cc9ea336!2sTheLicious%2C%20Food%20%26%20Dessert%20(UIAM)!5e0!3m2!1sen!2smy!4v1735979977514!5m2!1sen!2smy"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="d-flex flex-column w-100 align-items-center gap-8 p-4"
+                style="background: url('images/HSDRY.png'); background-size: cover;">
+                <h2>TheLicious Food & Dessert Booth (HS Cafe Dry Area)</h2>
+                <p>10am-6pm ( Monday - Friday )</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248.96209310136396!2d101.73414316156044!3d3.2519975600743414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc39ade99fdb99%3A0x2f5466b409105a78!2sKuliyyah%20Human%20Science%20Dry%20Area%20(HS%20Dry%20Area)!5e0!3m2!1sen!2smy!4v1735980091644!5m2!1sen!2smy&zoom=30"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </div>
-    <div class="section">
-        <h1>Bruh</h1>
-        <p>Hello</p>
-        <div class="grid">
-            <div>bruh</div>
-        </div>
-    </div>
-    <div class="section">
-        <h1>Bruh</h1>
-        <p>Hello</p>
-        <div class="grid">
-            <div>bruh</div>
+
+    <!-- Contact -->
+    <div class=" p-4 container text-white text-center bg-desserts">
+        <h1>Join Our Groups</h1>
+        <p>And get started on ordering!</p>
+        <div class="d-flex justify-content-center">
+            <a href="https://chat.whatsapp.com/K76p6kuwkxG78dddQQcd4u" target="_blank"
+                class="border-white border m-1 rounded-lg p-1 d-flex w-25 flex-column text-white">
+                <h2 class="flex-fill text-break">THELICIOUS FOOD & DESSERT UIA</h2>
+                <div class="flex-fill">WhatsApp Group</div>
+            </a>
+            <a href="https://t.me/theliciousiium" target="_blank"
+                class="border-white border m-1 rounded-lg p-1 d-flex w-25 flex-column text-white">
+                <h2 class="flex-fill">The Licious IIUM , Food & Dessert</h2>
+                <div class="flex-fill">Telegram Group</div>
+            </a>
         </div>
     </div>
 

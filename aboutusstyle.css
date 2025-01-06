@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  --red: #e35656;
+  --black: #000;
+  --white: #fff;
+  --pink: #fab;
+  --gray: #eee;
+}
+
+
+/* Hamburger menu styling */
+.hamburger-menu {
+  padding-top: 15px;
+  display: none;
+  /* Hidden on larger screens */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: black;
+}
+
+.section {
+  width: 90%;
+  max-width: 1200px;
+  padding: 4rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.card-right {
+  border: 3px solid var(--black);
+  border-radius: 10px;
+  background: var(--white);
+  padding: 1rem;
+  margin: 1rem;
+  width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  float: right;
+  box-sizing: border-box;
+}
+
+.card-left {
+  border: 3px solid var(--black);
+  border-radius: 10px;
+  background: var(--white);
+  padding: 1rem;
+  margin: 1rem;
+  width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  float: left;
+  box-sizing: border-box;
+}
+
+.card-left:hover,
+.card-right:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-left h2,
+.card-right h2 {
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+
+.card-left p,
+.card-right p {
+  color: var(--black);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .d-flex.justify-content-between img, 
+  .d-flex.flex-row-reverse.justify-content-between img
+  {
+    display: none;
+    width: 50%;
+    flex-direction: column;
+  }
+  .hamburger-menu {
+    display: flex;
+    /* Show hamburger menu */
+    padding-bottom: 20px;
+    align-items: center;
+  }
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header ul {
+    align-items: center;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  nav ul {
+    gap: 0.5rem;
+  }
+
+  .section {
+    padding: 1rem;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+}
+
+img {
+  width: 200px;
+  height: 100%;
+  object-fit: cover;
+}
