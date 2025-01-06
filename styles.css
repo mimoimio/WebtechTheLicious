@@ -86,11 +86,10 @@ a:hover {
 
 #places div iframe {
   box-shadow: #0004 2px 2px 8px;
+  width: 100%;
+  height: 200px;
 }
 
-#booths div iframe {
-  width: 100%;
-}
 
 @media (max-width:767px) {
   #places {
@@ -231,10 +230,16 @@ menu.html
 
 .menu {
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 16px;
+  margin:auto;
 
 }
+@media (min-width: 1200px){
+.teaser-menu {
+  width: 1000px;
+}}
 
 @media (max-width:767px) {
   .menu {
