@@ -10,7 +10,7 @@ export default function footer() {
                     <a href="menu.html">Contact Us</a>
                 </div>
                 <div class="item">
-                    <div class="d-flex flex-row align-items-center">
+                    <div class="d-flex flex-row align-items-center  d-flex flex-column">
                     <a href="https://www.facebook.com/thelicious.hq/?locale=ms_MY" target="_blank">
                         <i class="bi bi-facebook"></i>
                     </a>

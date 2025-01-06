@@ -27,7 +27,6 @@
 }
 
 .section {
-  background: var(--pink);
   width: 90%;
   max-width: 1200px;
   padding: 4rem;
@@ -89,7 +88,13 @@
 }
 
 @media (max-width: 768px) {
-
+  .d-flex.justify-content-between img, 
+  .d-flex.flex-row-reverse.justify-content-between img
+  {
+    display: none;
+    width: 50%;
+    flex-direction: column;
+  }
   .hamburger-menu {
     display: flex;
     /* Show hamburger menu */

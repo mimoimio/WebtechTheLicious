@@ -7,6 +7,10 @@ general
 
 */
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   display: flex;
   flex-direction: column;
@@ -80,11 +84,11 @@ a:hover {
   border-radius: 2rem;
 }
 
-#places div iframe{
+#places div iframe {
   box-shadow: #0004 2px 2px 8px;
 }
 
-#booths div iframe{
+#booths div iframe {
   width: 100%;
 }
 
@@ -141,7 +145,7 @@ a:hover {
 }
 
 .section {
-  background: var(--pink);
+  /* background: var(--pink); */
   width: 90%;
   max-width: 1200px;
   padding: 2rem;
@@ -238,6 +242,19 @@ menu.html
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 16px;
   }
+
+  .menu .menu-item {
+    padding: 5px;
+  }
+  .menu .menu-item .dd {
+    display: none;
+  }
+
+  .menu .menu-item img {
+    width: 300px;
+    height: 100px;
+    object-fit: cover;
+  }
 }
 
 .menu-item {
@@ -263,7 +280,7 @@ menu.html
   color: #555;
 }
 
-img {
+.menu div img {
   width: 300px;
   height: 200px;
   object-fit: cover;
