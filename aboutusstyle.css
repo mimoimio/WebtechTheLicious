@@ -8,12 +8,64 @@
   --gray: #eee;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Koulen", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 60px; /* Adjust based on header height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--gray);
+}
+
+/* Basic header and nav styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding-top: 10px;
+}
+
+nav ul li {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 900px;
+  box-shadow: solid 3px;
+  text-decoration: none;
+  align-items: center;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: red;
+}
 
 /* Hamburger menu styling */
 .hamburger-menu {
   padding-top: 15px;
-  display: none;
-  /* Hidden on larger screens */
+  display: none; /* Hidden on larger screens */
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
@@ -27,6 +79,7 @@
 }
 
 .section {
+  background: var(--pink);
   width: 90%;
   max-width: 1200px;
   padding: 4rem;
@@ -55,7 +108,6 @@
   float: right;
   box-sizing: border-box;
 }
-
 .card-left {
   border: 3px solid var(--black);
   border-radius: 10px;
@@ -88,19 +140,43 @@
 }
 
 @media (max-width: 768px) {
-  .d-flex.justify-content-between img, 
-  .d-flex.flex-row-reverse.justify-content-between img
-  {
-    display: none;
-    width: 50%;
+  header ul {
     flex-direction: column;
+    align-items: flex-start;
   }
+
   .hamburger-menu {
-    display: flex;
-    /* Show hamburger menu */
+    display: flex; /* Show hamburger menu */
     padding-bottom: 20px;
     align-items: center;
   }
+
+  nav {
+    display: none; /* Hide nav by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    right: 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  nav.active {
+    display: flex; /* Show nav when active */
+  }
+
+  .section {
+    padding: 1.5rem;
+  }
+
+  .card-right,
+  .card-left {
+    max-width: 100%; /* Allow cards to take full width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
   header {
     flex-direction: column;
     text-align: center;
@@ -129,10 +205,4 @@
   .card p {
     font-size: 0.8rem;
   }
-}
-
-img {
-  width: 200px;
-  height: 100%;
-  object-fit: cover;
 }
