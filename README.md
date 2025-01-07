@@ -1,6 +1,6 @@
 # WEBTECH INFO 2302 GROUP PROJECT: THELICIOUS WEBSITE 
-Section : 04
-Year : 2024/2025 Sem 1
+Section : ``` 04 ```
+Year : ``` 2024/2025 Sem 1 ```
 Group mates: 
 ```
 1. AIMAN BIN AHMAD ZAINULKAMAL          2311929
